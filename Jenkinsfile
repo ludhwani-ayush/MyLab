@@ -35,9 +35,11 @@ pipeline{
                 dontSetBuildResultOnFailure: false, 
                 dontWaitForConcurrentBuildCompletion: false, 
                 entries: [[bucket: 'myartifacts-bucket-1995', 
-                excludedFile: '/webapp/target', flatten: false, 
-                gzipFiles: false, keepForever: 
-                false, managedArtifacts: false, 
+                excludedFile: '/webapp/target', 
+                flatten: false, 
+                gzipFiles: false, 
+                keepForever: false, 
+                managedArtifacts: false, 
                 noUploadOnFailure: true, 
                 selectedRegion: 'us-east-1', 
                 showDirectlyInBrowser: false, 
@@ -47,8 +49,7 @@ pipeline{
                 useServerSideEncryption: false]], 
                 pluginFailureResultConstraint: 'FAILURE', 
                 profileName: 's3artifactdemo', 
-                
-            }
+                }
         }
 
 
