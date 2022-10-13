@@ -27,8 +27,9 @@ pipeline{
         stage ('Storing Artificat'){
             steps {
               
-            sh "sshPublisher(publishers: [sshPublisherDesc(configName: 'ansibleserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt/playbooks', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])"   
-        }
+            sh 'sshPublisher(publishers: [sshPublisherDesc(configName: 'ansibleserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: ''//opt/playbooks', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'webapp/target/*.war'')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])'
+            
+            }
         }
 
 
